@@ -9,6 +9,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -39,7 +41,7 @@
                         &nbsp;<li class="dropdown">
                             <a href="#"class="dropdawn-toggle" data-toggle="dropdown" role="button" aria-expanded="false"Блог></a>
                             <ul class="dropdawn-menu" role="menu">
-                                <li><a href="#">Категории</a></li>
+                                <li><a href="{{route('admin.category.index')}}">Категории</a></li>
                                 <li><a href="#">Материалы</a></li>
                             </ul>
                         </li>
@@ -79,7 +81,10 @@
 
         @yield('content')
     </div>
-
+    <script src="{{/vendor/unisharp/laravel-ckeditor/ckeditor.js}}"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
