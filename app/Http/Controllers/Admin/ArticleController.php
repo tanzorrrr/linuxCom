@@ -28,12 +28,14 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('admin.articles.create',[
-            'article'=>[],
-            'categories'=>Category::with('children')->where('parent_id',0)->get(),
-            'delimeter'=>''
+        return view('admin.articles.create', [
+            'article'    => [],
+            'categories' => Category::with('children')->where('parent_id', 0)->get(),
+            'delimiter'  => ''
         ]);
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -75,7 +77,7 @@ class ArticleController extends Controller
         return view('admin.articles.edit',[
             'article'=>$article,
             'categories'=>Category::with('children')->where('parent_id',0)->get(),
-            'delimeter'=>''
+            'delimiter'  => ''
         ]);
     }
 

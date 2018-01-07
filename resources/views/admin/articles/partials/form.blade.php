@@ -34,6 +34,6 @@
 <label for="">Meta description</label>
 <input type="text" class="form-control" name="meta_description" placeholder="meta description" value="{{$article->meta_description or ""}}">
 <label for="">Key words</label>
-<input type="text" class="form-control" name="meta_keyword" placeholder="keyword throe coma" value="{{$article->meta_keyword or  ""}}" readonly="">
+<input type="text" class="form-control" name="meta_keyword" placeholder="keyword throe coma" value="{{$article->meta_keyword or  ""}}" >
 <hr>
 <input type="submit" class="btn btn-primary" value="Save">

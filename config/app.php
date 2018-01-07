@@ -180,6 +180,10 @@ return [
         //or pakeges
         Unisharp\Ckeditor\ServiceProvider::class,
 
+        //Own provaiders
+        App\Providers\BlogServiceProvider::class,
+
+
     ],
 
     /*
