@@ -9,7 +9,7 @@
                 @slot('active')News @endslot
             @endcomponent
             <hr>
-            <form class="form-horizontal" action="{{route('admin.article.store')}}" method="post">
+            <form  enctype="multipart/form-data" class="form-horizontal" action="{{route('admin.article.store')}}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 {{--Form incluse--}}
                 @include('admin.articles.partials.form')

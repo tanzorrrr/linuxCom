@@ -11,7 +11,8 @@
 
 <label for="">Title</label>
 <input type="text" class="form-control" name="title" placeholder="Categories title" value="{{$article->title or ""}}" required>
-
+<label for="">Photo</label>
+<input type="file">
 <label for="">slug(unic value)</label>
 <input type="text" class="form-control" name="slug" placeholder="automatic grnerate" value="{{$article->slug or  ""}}" readonly="">
 
